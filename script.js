@@ -20,13 +20,13 @@ submitBtn.addEventListener("click", function (e) {
     apiFetch.then((response) => {
         return response.json();
     }).then((response) => {
-
-        response.forEach(element => {
-            console.log(element.meanings)
-        });
+        console.log(response)
+        // response.forEach(element => {
+        //     console.log(element.meanings)
+        // });
 
         resultDiv.innerHTML = '';
-        if (response.title && response.title === "No Definitions Found") {
+        if (response.title === "No Definitions Found") {
 
             let ul = document.createElement('ul');
             let li = document.createElement('li');
