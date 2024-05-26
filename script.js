@@ -59,7 +59,7 @@ submitBtn.addEventListener("click", function (e) {
                     if (antonyms.length === 0) {
                         antonyms.push("no Antonym")
                     }
-                    li.innerHTML = `<h5><strong>Part of Speech:</strong> <u>${partOfSpeech}</u> </br><strong>Definition: </strong> <ul>${definition.map(d => `<li> ${d} </li>`).join('')}</ul> <strong>Synonyms: </strong><ul>${synonyms.map(s => `<li>${s}</li>`).join('')} </ul> <strong>Antonyms: </strong> <ul>${antonyms.map(a => `<li>${a}</li>`).join('')} </ul></h5> <br><br>`;
+                    li.innerHTML = `<p><strong>Part of Speech:</strong> <u>${partOfSpeech}</u> </br><strong>Definition: </strong> <ul>${definition.map(d => `<li> ${d} </li>`).join('')}</ul> <strong>Synonyms: </strong><ul>${synonyms.map(s => `<li>${s}</li>`).join('')} </ul> <strong>Antonyms: </strong> <ul>${antonyms.map(a => `<li>${a}</li>`).join('')} </ul></p> <br><br>`;
                     ul.appendChild(li);
                 })
             });
