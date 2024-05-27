@@ -10,4 +10,7 @@
     margin-left: auto;
     margin-right: auto;
     display: block;
+    padding: 3px;
+    /* background: linear-gradient(to bottom right, #0033cc 0%, #ff66cc 100%); */
+    border: 3px solid black;
 }
