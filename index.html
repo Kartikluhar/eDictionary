@@ -16,10 +16,12 @@
         <div class="container rounded shadow bg-light m-2">
         <img src="images/logo.jpg" class="logo my-5">
         <h1 class="text-center">e-Dictionary</h1>
+        <h5 id="catfacts" class="my-3 text-center"></h5>
         <form action="" class="mt-5" id="form">
             <label for="input-word" class="form-label">Enter Word to know about it</label>
             <input type="text" id="input-word" class="form-control" aria-describedby="passwordHelpBlock"
                 placeholder="Enter Word..." required autocomplete="off">
+            <p class="text-danger my-2" id="emptyInput"></p>
             <button type="submit" class="btn btn-primary mt-2" id="submit-btn">Search</button>
         </form>
         <div class="headings">
