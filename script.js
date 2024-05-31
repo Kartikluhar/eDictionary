@@ -72,7 +72,7 @@ submitBtn.addEventListener("click", function (e) {
             }
         })
     }
-    else{
+    else {
         emptyInput.innerHTML = `<small>Enter a word!!</small>`;
     }
 })
@@ -84,3 +84,38 @@ catFactApi.then((response) => {
 }).then((data) => {
     catFacts.innerHTML = `<u><b>Daily Cat facts:</b></u> ${data.data[0]}`;
 })
+
+// const catFactsElement = document.getElementById("catfacts");
+
+// // Function to fetch a new cat fact from the API
+// function fetchNewCatFact() {
+//     fetch('https://meowfacts.herokuapp.com/?count=1')
+//         .then(response => response.json())
+//         .then(data => {
+//             const catFact = data.data[0];
+//             // Save the new cat fact and the current timestamp in local storage
+//             const now = new Date().getTime();
+//             localStorage.setItem('catFact', catFact);
+//             localStorage.setItem('catFactTimestamp', now);
+//             displayCatFact(catFact);
+//         });
+// }
+
+// // Function to display a cat fact
+// function displayCatFact(catFact) {
+//     catFactsElement.innerHTML = `<u><b>Daily Cat Fact:</b></u> ${catFact}`;
+// }
+
+// // Check local storage for a saved cat fact and its timestamp
+// const savedCatFact = localStorage.getItem('catFact');
+// const savedTimestamp = localStorage.getItem('catFactTimestamp');
+// const now = new Date().getTime();
+// const oneDay = 24 * 60 * 60 * 1000; // 24 hours in milliseconds
+
+// if (savedCatFact && savedTimestamp && (now - savedTimestamp < oneDay)) {
+//     // If a saved cat fact exists and is less than 24 hours old, display it
+//     displayCatFact(savedCatFact);
+// } else {
+//     // Otherwise, fetch a new cat fact
+//     fetchNewCatFact();
+// }
